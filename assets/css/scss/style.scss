@@ -1,0 +1,18 @@
+@import 'reset.scss';
+@import 'colors.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'utilitys.scss';
+@import 'inputs.scss';
+@import 'formulario.scss';
+@import 'content.scss';
+@import 'responsividade.scss';
+
+html{
+   scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FAEFDD;
+    font-size: 14px;
+}

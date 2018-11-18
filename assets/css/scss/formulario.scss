@@ -1,0 +1,85 @@
+.cadastro-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    &-item {
+        margin: 10px 20px;
+        width: 40%;
+    }
+
+    &-termos {
+        height: 160px;
+        margin-top: 20px;
+        overflow: auto;
+        width: 90%;
+    }
+
+    &-itens {
+        display: flex;
+        text-align: left;
+    }
+
+    &-aviso {
+        background-color: #f8d7da;
+        border-radius:4px;
+        color: #721c24;
+        padding: 14px 6px;
+        text-align: center;
+        width: 90%
+    }
+
+    &-titulo {
+        color: $color-main;
+        font-size:24px;
+        margin-bottom: 30px;
+    }
+
+}
+
+.colaboradores {
+    &-titulo {
+        color: $color-main;
+        font-size: 20px;
+        margin: 60px auto 30px auto;
+    }
+
+    &-itens {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &-item {
+        text-align: left;
+        border-left:solid 2px $color-main;
+        font-size: 14px;
+        margin-right: 6px;
+        padding-left: 6px;
+        width: 16%;
+    }
+
+    p{
+        color: $color-main;
+        font-weight: bold;
+    }
+
+    &-remover{
+        cursor: pointer;
+        margin-top: 4px;
+    }
+
+    &-acao {
+        width: 50px
+    }
+}
+
+ 
+.termos-confirmado {
+    color:#000;
+}
+
+.termos-nao-confirmado {
+    color:#ccc
+}

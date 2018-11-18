@@ -1,0 +1,41 @@
+
+.header {
+  align-items: center;
+  background-color: $color-main;
+  display: flex;
+  height: 50px;
+  padding-left: 100px; 
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+
+  &-item{
+    color:#fff;
+    font-size: 14px;
+    margin: 0 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $content-bgcolor;
+      border-bottom: 1px solid $content-bgcolor;
+      padding-bottom: 10px;
+      transition: all .5s;    
+    }
+  }
+
+  &-destaque {
+    background-image: url('../../assets/images/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
+  &-logotipo {
+    display: block;
+    margin: 0 auto;
+  }
+}
+

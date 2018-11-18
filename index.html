@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Desafio Front-end INEMA</title>
+</head>
+<body>
+
+    <!-- MENU MOBILE FECHADO -->
+    <ul class="menu-hamburger" onclick="abreMenuHamburger()">
+        <li class="menu-hamburger-icons"></li>
+        <li class="menu-hamburger-icons"></li>
+        <li class="menu-hamburger-icons"></li>
+    </ul>
+
+    <!-- MENU MOBILE ABERTO -->
+    <div id="menu-hamburger-opened" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="fechaMenuHamburger()">×</a>
+        <div class="overlay-content">
+            <ul id="menu-mobile-links">
+                <li>
+                    <a href="#inicio" class="header-item"> Início </a>
+                </li>
+                <li>
+                    <a href="#concurso" class="header-item"> O concurso </a>
+                </li>
+                <li>
+                    <a href="#sobre" class="header-item"> Sobre </a>
+                </li>
+                <li>
+                    <a href="#regras" class="header-item"> Regras </a>
+                </li>
+                <li>
+                    <a href="inscricao.html" class="header-item"> Inscrição </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <header>
+        <ul class="header">
+            <li>
+                <a href="#inicio" class="header-item"> Início </a>
+            </li>
+            <li>
+                <a href="#concurso" class="header-item"> O concurso </a>
+            </li>
+            <li>
+                <a href="#sobre" class="header-item"> Sobre </a>
+            </li>
+            <li>
+                <a href="#regras" class="header-item"> Regras </a>
+            </li>
+            <li>
+                <a href="#inscricao" class="header-item"> Inscrição </a> 
+            </li>
+        </ul>
+    </header>
+
+    <!-- IMAGEM DE DESTAQUE -->
+    <div class="header-destaque" id="inicio"> 
+        <a href="#inicio">
+            <img src="assets/images/logotipo-varal-das-aguas.png" class="header-logotipo image-responsive" alt="logotipo Varal das Águas do Concurso de Fotografia" title="Varal das Águas - Concurso de Fotografia">        
+        </a> 
+
+        <main class="main" id="concurso">
+            <!-- O CONCURSO -->
+            <section class="main-o-concurso">
+                <h1 class="main-titulo">O Concurso</h1>  
+    
+                <p class="main-descricao">
+                    Concurso de fotografia para todos os técnicos do Inema para exposição de fotos que retratem a temática água (os
+                    desafios e as belezas encontradas em campo) pelos colaboradores. Além de uma apresentação cultural com um artista de
+                    rua (poesia, musica, cordel) que aborde a temática água.
+                </p>
+            </section>
+
+            <section class="main-inscricao">
+                <div class="main-inscricao-informacao">
+                    <div>
+                        <p class="main-inscricao-titulo">EXPOSIÇÃO DE FOTOS</p>
+                        <p class="main-inscricao-descricao">20 á 24/03/2017 na divisórias da Ouvidoria (em frente ao elevador)</p>
+                    </div>    
+    
+                    <div>
+                        <p class="main-inscricao-titulo">APRESENTAÇÃO</p>
+                        <div class="main-inscricao-descricao"> 
+                            <p>20/03/2017 das</p>
+                            <p>16:30h ás 17:30h.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="inscricao.html" id="inscricao" class="main-inscricao-botao" title="Faça sua inscrição">Faça sua inscrição &rarr;</a>
+            </section>
+
+            <div class="divisor-areas" id="sobre"></div>
+
+            <!-- SOBRE -->
+            <section class="main-sobre">
+                <h1 class="main-titulo">Sobre</h1>
+
+                <p class="main-descricao">
+                   <em> Objetivos </em>
+                </p>
+                <p class="main-descricao">
+                    Promover a seleção de 100 fotografias produzidas por colaboradores do Inema em comemoração ao dia da água, que será
+                    elaborado um mural de fotos denominado de “Varal das Águas”.
+                </p>
+
+                <p class="main-descricao">
+                    <em> Dos participante </em>
+                </p>
+                <p class="main-descricao">
+                    Poderão participar do Concurso Fotográfico 2017: Todos os colaboradores do Instituto do Meio Ambiente e Recursos
+                    Hídricos - INEMA e Secretaria do Meio Ambiente -SEMA.
+                </p>
+
+                <p class="main-descricao">
+                    <em> Das especificações das fotografias participante </em>
+                </p>
+                <p class="main-descricao">
+                    As fotografias devem abordar somente o tema OS DESAFIOS E AS BELEZAS RETRATADAS EM CAMPO REFERENTE À SITUAÇÃO HIDRICA,
+                    devendo ser obrigatoriamente a foto ser tirada em inspeção em campo a serviço do Inema.
+                </p>
+
+                <p class="main-descricao">
+                    <em> Premiação final do concurso </em>
+                </p>
+                <p class="main-descricao">
+                    As 05 (cinco) primeiras fotografia que for mais votada nas redes sociais (Facebook e Instagram) do Inema, receberá como
+                    prêmio.
+                </p>
+            </section>
+
+            <!-- REGRAS -->
+            <section class="main-regras" id="regras">
+                <h1 class="main-titulo">Regras</h1>
+
+                <p class="main-descricao">
+                    Todas as fotos que retrate da temática água (tais como situação de secas ou excedentes hídricos, as belezas e os
+                    desafios de se trabalhar com os recursos hídricos etc.) serão bem vindas.
+                </p>
+
+                <ul>
+                    <li class="main-regras-item">• As fotos devem ser originais e sem alterações.</li>
+                    <li class="main-regras-item">• As fotos devem expor os ambientes visitados em inspeções técnicas realizadas durante inspeções pelo INEMA.</li>
+                    <li class="main-regras-item">• Fotografias que incluam pessoas serão desclassificadas.</li>
+                    <li class="main-regras-item">• As fotos devem ser enviadas com um formulário de inscrição preenchido.</li>
+                    <li class="main-regras-item">• As fotografias do concurso se tornarão publicas.</li>
+                    <li class="main-regras-item">• O fotógrafo da foto que receber mais votos ganhará um prêmio simbólico.</li>
+                    <li class="main-regras-item">• Cada pessoa só poderá cadastrar uma única foto.</li>
+                    <li class="main-regras-item">• A votação será por meio das redes sociais do INEMA.</li>
+                    <li class="main-regras-item">• As vagas serão limitadas apenas 50.</li>
+                </ul> <br><br>
+
+                <p>A foto vencedora irá ganhar um kit de brinde (Agenda, caneta, livro).</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <a href="">
+            <img src="assets/images/logotipo-inema.png" class="footer-logotipo" alt="logotipo do INEMA" title="INEMA - Estadual do Meio Ambiente e Recursos Hídricos">
+        </a>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

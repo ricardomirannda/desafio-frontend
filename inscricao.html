@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Desafio Front-end INEMA</title>
+</head>
+<body ng-app="concursoDasAguas" ng-controller="concursoDasAguas">
+
+    <!-- MENU MOBILE FECHADO -->
+    <ul class="menu-hamburger" onclick="abreMenuHamburger()">
+        <li class="menu-hamburger-icons"></li>
+        <li class="menu-hamburger-icons"></li>
+        <li class="menu-hamburger-icons"></li>
+    </ul>
+
+    <!-- MENU MOBILE ABERTO -->
+    <div id="menu-hamburger-opened" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="fechaMenuHamburger()">×</a>
+        <div class="overlay-content">
+            <ul id="menu-mobile-links">
+                <li>
+                    <a href="#inicio" class="header-item"> Início </a>
+                </li>
+                <li>
+                    <a href="#concurso" class="header-item"> O concurso </a>
+                </li>
+                <li>
+                    <a href="#sobre" class="header-item"> Sobre </a>
+                </li>
+                <li>
+                    <a href="#regras" class="header-item"> Regras </a>
+                </li>
+                <li>
+                    <a href="#inscricao" class="header-item"> Inscrição </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <header>
+        <ul class="header">
+            <li>
+                <a href="#inicio" class="header-item"> Início </a>
+            </li>
+            <li>
+                <a href="#concurso" class="header-item"> O concurso </a>
+            </li>
+            <li>
+                <a href="#sobre" class="header-item"> Sobre </a>
+            </li>
+            <li>
+                <a href="#regras" class="header-item"> Regras </a>
+            </li>
+            <li>
+                <a href="#inscricao" class="header-item"> Inscrição </a> 
+            </li>
+        </ul>
+    </header>
+
+    <!-- IMAGEM DE DESTAQUE -->
+    <div class="header-destaque" id="inicio"> 
+        <a href="index.html">
+            <img src="assets/images/logotipo-varal-das-aguas.png" class="header-logotipo image-responsive" alt="logotipo Varal das Águas do Concurso de Fotografia" title="Varal das Águas - Concurso de Fotografia">        
+        </a> 
+
+        <main class="main">
+
+            <h1 class="cadastro-formulario-titulo">Cadastro</h1>
+            <div class="cadastro-formulario">
+
+                <!-- NOME DO COLABORADOR -->
+                <div class="cadastro-formulario-item">
+                    <label for="nome-colaborador">Nome do Colaborador</label>
+                    <input type="text" ng-model="cadastro.nome"  placeholder="Ex: Ricardo Miranda" id="nome-colaborador">
+                </div>
+
+                <!-- NOME DA FOTO -->
+                <div class="cadastro-formulario-item">
+                    <label for="nome-foto">Nome da foto</label>
+                    <input type="text" ng-model="cadastro.foto" placeholder="Ex: Terceira Praia" id="nome-foto">
+                </div>
+
+                <!-- LOCAL DA FOTO -->
+                <div class="cadastro-formulario-item">
+                    <label for="local-foto">Local da foto</label>
+                    <input type="text" ng-model="cadastro.local" placeholder="Ex: Morro de São Paulo" id="local-foto">
+                </div>
+    
+                <!-- DATA DE REGISTRO -->
+                <div class="cadastro-formulario-item">
+                    <label for="data-registro">Data de registro</label>
+                    <input type="date" ng-model="cadastro.data" id="data-registro">
+                </div>
+            </div>
+
+            <label>Termos</label>
+            <div class="cadastro-formulario-termos" ng-class="{'termos-confirmado' : cadastro.termos, 'termos-nao-confirmado' : !cadastro.termos}">
+                <p><b>Cláusula 7.</b> O prazo para confecção XXXX dias, contados a partir da data da aprovação final do layout. A
+                    entrega XXXX se dará após o pagamento do saldo de 50% do eventual valor adicional. <b>O CONTRATANTE </b>será
+                    responsável pela retirada XXXX no local acordado entre as partes, ou por suas despesas de envio via SEDEX. A <b>CONTRATADA</b>
+                    não se responsabiliza por livros não retirados no prazo de 30 dias após a comunicação por escrito de sua
+                    disponibilidade, e haverá uma cobrança com taxa de 2%/mês sobre o valor do saldo devedor.
+                </p> <br>
+
+                <p><b>Cláusula 8.</b> Em caso de atraso na entrega do XXXX ao cliente, a <b>CONTRATADA</b> pagará uma multa de 2%/mês
+                    ao <b>CONTRATANTE </b>referente ao período atrasado equivalente ao valor deste contrato.
+                </p> <br>
+
+                <p><b>Cláusula 9.</b> As imagens do evento são de propriedade exclusiva da <b>CONTRATADA, ficando proibida</b> a
+                    reprodução não autorizada de imagens, por cópia digital ou outro meio para fins comerciais ou para outros
+                    fornecedores, sem aviso prévio da <b>CONTRATADA</b>, sob multa de 25% do valor estipulado na cláusula <b>3ª</b>
+                    deste contrato.
+                </p> <br>
+
+                <p><b>Cláusula 10.</b> O <b>CONTRATANTE </b>não se opõe quanto ao uso das imagens dos arquivos digitais pela <b>CONTRATADA</b>
+                    e sua equipe para uso <b>exclusivamente</b> comercial e promocional, sendo usado como material impresso
+                    (portfólio), ou, o uso em tablets como forma de divulgação para outros <b>CONTRATANTES, </b>uma vez que os mesmos
+                    fazem parte de seu acervo, não se cogitando, em nenhuma hipótese, a aplicabilidade da<b> Lei <a href="http://www.jusbrasil.com.br/legislacao/92175/lei-de-direitos-autorais-lei-9610-98"
+                            class="cite" rel="10631003" title="Lei nº 9.610, de 19 de fevereiro de 1998.">9.610</a> de 19/2/98 (Lei dos
+                        Direitos Autorais)</b>, como também, podendo ser usados inclusive no website <a rel="nofollow" target="_blank"
+                        href="http://www.seudominio.com.br">www.seudominio.com.br</a>, em mídias sociais para divulgação, amostras,
+                    exposições, concursos internos (nacionais) e externos (internacionais), anúncios e publicações.</p>
+            </div> <br>
+
+            <label for="concordo-termos">
+                <input type="checkbox" id="concordo-termos"  ng-model="cadastro.termos"> Eu li e concordo com os termos 
+            </label>
+
+            <div class="cadastro-formulario-aviso" ng-show="!cadastro.nome || !cadastro.foto || !cadastro.termos">
+                Aceite os termos estabelecidos e informe o nome do colaborador e foto
+            </div>
+
+            <button class="main-inscricao-botao" ng-disabled="!cadastro.nome && !cadastro.foto" ng-click="cadastrarPessoa()">Salvar</button>
+            
+            <!-- COLABORADORES CADASTRADOS -->
+            <div class="colaboradores" ng-if="cadastro.length">
+                <h2 class="colaboradores-titulo">Lista de Colabadoradores adicionados</h2>
+                <ul class="colaboradores-itens" ng-repeat="pessoa in cadastro track by $index">
+                    <li class="colaboradores-item">
+                        <small>Nome</small>
+                        <p>{{pessoa.nome}}</p>                        
+                    </li>
+
+                    <li class="colaboradores-item">
+                        <small>Local</small>
+                        <p>{{pessoa.local}}</p>                        
+                    </li>
+
+                    <li class="colaboradores-item">
+                        <Small>Foto</Small>
+                        <p>{{pessoa.foto}}</p>                        
+                    </li>
+
+                    <li class="colaboradores-item">
+                        <small>Data</small>
+                        <p>{{pessoa.data | date:'dd/MM/yyyy'}} </p>                          
+                    </li>        
+
+                    <li class="colaboradores-item colabadores-acao">
+                        <small>Ação</small>
+                        <p>
+                            <img src="assets/images/remover.png" class="colaboradores-remover" height="20" ng-click="removerPessoa($index)"
+                        title="Remover">
+                        </p>
+                    </li>        
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <footer class="footer">
+        <a href="">
+            <img src="assets/images/logotipo-inema.png" class="footer-logotipo" alt="logotipo do INEMA" title="INEMA - Estadual do Meio Ambiente e Recursos Hídricos">
+        </a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="assets/js/angular-scripts.js"></script>`
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>

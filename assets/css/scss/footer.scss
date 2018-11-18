@@ -1,0 +1,13 @@
+.footer {
+    align-items: center;
+    background-color: $content-bgcolor;
+    border-top: 8px solid $color-main;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+
+    &-logotipo{
+        display: block;
+    }
+}

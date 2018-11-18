@@ -1,0 +1,68 @@
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media screen and  (min-width: 300px) and (max-width: 767px) {
+
+  .header  {
+    display: none;
+
+    &-destaque {
+      padding-top: 20px;
+    }
+  }
+
+  .main {
+    margin-top: 36px;
+    padding: 30px;
+
+    &-inscricao {
+      font-size: 16px;
+      margin-top: 50px;
+      position: initial;
+      width: 100%;
+
+      &-botao {
+        height: 58px;
+        line-height: 58px;
+        margin-top: 24px;
+        width: 100%;
+      }
+    }
+
+    &-o-concurso {
+      width: 100%;
+    }
+  }
+
+   .cadastro-formulario-item {
+    margin: 10px 0px;
+    width: 90%;
+  }
+
+  .cadastro-formulario-aviso {
+    width: 100%;
+  }
+
+  .colaboradores-item {
+      margin-bottom: 20px;
+      width: 100%;
+  }   
+}
+
+@media screen and (min-width: 767px) {
+  .menu-hamburger  {
+    display: none
+  }
+}
+
+@media screen and  (min-width: 768px) and (max-width: 1024px) {
+  .main  {
+    margin-top: 220px;
+  }
+}
